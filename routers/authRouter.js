@@ -16,7 +16,7 @@ authRouter.post("/user/signup", async (req, res) => {
         // const token = await jwt.sign({_id: newUser._id},"DevLink")
         // res.cookie("token", token)
 
-        res.send("Done!")
+        res.json({message: "Done!"})
         
     } catch (err) {
         res.status(400).json({message: "Error: "+err})
@@ -39,7 +39,7 @@ authRouter.post("/user/signin", async (req, res) => {
         // res.cookie("token", token)
         
         console.log("third")
-        res.send({token})
+        res.json({token})
     } catch (err) {
         res.status(400).json({message: "Error: "+err})
     }
